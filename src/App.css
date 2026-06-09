@@ -1,0 +1,206 @@
+.app-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.note-form,
+.note-card,
+.empty-state {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.note-form {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.note-form h2,
+.notes-header h2,
+.note-content h2 {
+  margin: 0;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: var(--text-strong);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--field);
+  color: var(--text);
+  font: inherit;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 42px;
+  padding: 10px 16px;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
+.theme-toggle,
+.primary-button {
+  background: var(--accent);
+  color: white;
+}
+
+.secondary-button {
+  background: var(--button-soft);
+  color: var(--text-strong);
+}
+
+.danger-button {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.notes-section {
+  display: grid;
+  gap: 16px;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.notes-header span {
+  display: inline-grid;
+  min-width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--button-soft);
+  color: var(--text-strong);
+  font-weight: 800;
+}
+
+.notes-list {
+  display: grid;
+  gap: 14px;
+}
+
+.note-card {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+}
+
+.note-content {
+  display: grid;
+  gap: 10px;
+}
+
+.note-content p {
+  margin: 0;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+
+.note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.note-edit-form {
+  display: grid;
+  gap: 16px;
+}
+
+.empty-state {
+  padding: 28px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: min(100% - 20px, 1120px);
+    padding: 24px 0;
+  }
+
+  .app-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .note-actions {
+    justify-content: stretch;
+  }
+
+  .note-actions button,
+  .theme-toggle {
+    flex: 1 1 auto;
+  }
+}
