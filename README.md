@@ -9,6 +9,8 @@ React with Typescript
 - Toggle light and dark theme.
 # How to start app
 Open terminal and run command `npm run dev`, after this you must see a link in terminal. Open the link and you must see the app.
+# Deployment link:
+https://ai-todo-list-p70u.onrender.com
 # Screenshots
 - Light theme
   <img width="1919" height="908" alt="Екранна снимка 2026-06-09 114406" src="https://github.com/user-attachments/assets/474856f9-0f96-4d14-b53d-728f9310096e" />
